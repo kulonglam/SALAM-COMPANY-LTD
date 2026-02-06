@@ -1,64 +1,71 @@
 // 1. Initialize EmailJS
-// Replace "YOUR_PUBLIC_KEY" with the public key from your EmailJS Account Dashboard
-// Go to Account -> API Keys
+// IMPORTANT: Replace with your actual Public Key from EmailJS Dashboard
 (function() {
+    // Example: emailjs.init("user_xyz123abc");
     emailjs.init("YOUR_PUBLIC_KEY"); 
 })();
 
-// 2. Handle Form Submission
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Stop page from reloading
+// 2. Handle Contact Form
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    // Get the button to change text while sending
-    const btn = document.getElementById('submit-btn');
-    const originalText = btn.innerText;
-    btn.innerText = 'Sending...';
-    btn.disabled = true;
+        const btn = document.getElementById('submit-btn');
+        const originalText = btn.innerText;
 
-    // These IDs must match your EmailJS Service ID and Template ID
-    // 1. Create a Service in EmailJS (e.g., Gmail)
-    // 2. Create an Email Template in EmailJS
-    const serviceID = 'YOUR_SERVICE_ID'; 
-    const templateID = 'YOUR_TEMPLATE_ID';
+        // UI Feedback: Loading
+        btn.innerText = 'Sending...';
+        btn.disabled = true;
 
-    emailjs.sendForm(serviceID, templateID, this)
-        .then(() => {
-            btn.innerText = 'Sent Successfully!';
-            btn.classList.remove('btn-custom-orange');
-            btn.classList.add('btn-success');
-            
-            // Reset form
-            document.getElementById('contact-form').reset();
-            
-            // Restore button after 3 seconds
-            setTimeout(() => {
-                btn.innerText = originalText;
+        // Replace with your Service ID and Template ID
+        const serviceID = 'YOUR_SERVICE_ID'; 
+        const templateID = 'YOUR_TEMPLATE_ID';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                // UI Feedback: Success
+                btn.innerText = 'Message Sent!';
+                btn.classList.remove('btn-custom-green');
+                btn.classList.add('btn-success');
+                
+                contactForm.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                    btn.classList.remove('btn-success');
+                    btn.classList.add('btn-custom-green');
+                }, 4000);
+            }, (err) => {
+                // UI Feedback: Error
+                btn.innerText = 'Error. Try Again.';
                 btn.disabled = false;
-                btn.classList.remove('btn-success');
-                btn.classList.add('btn-custom-orange');
-            }, 3000);
-        }, (err) => {
-            btn.innerText = 'Failed. Try Again.';
-            btn.disabled = false;
-            alert(JSON.stringify(err));
-        });
-});
+                console.error('EmailJS Error:', err);
+                alert('Failed to send message. Please check your internet connection.');
+            });
+    });
+}
 
-// 3. Smooth Scroll for Links
+// 3. Smooth Scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
 
-// 4. Navbar Shadow on Scroll
+// 4. Navbar Transparency Toggle
 window.addEventListener('scroll', function() {
+    const nav = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        document.querySelector('.navbar').classList.add('shadow-sm');
+        nav.classList.add('shadow-sm');
+        nav.style.background = 'rgba(255, 255, 255, 0.98)';
     } else {
-        document.querySelector('.navbar').classList.remove('shadow-sm');
+        nav.classList.remove('shadow-sm');
+        nav.style.background = 'rgba(255, 255, 255, 0.95)';
     }
 });

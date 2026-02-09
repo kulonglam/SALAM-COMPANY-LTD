@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Salam Company Ltd - Premium Tamarind Juice & Sustainable Millet Forage Production."
+      content="Salam Company Ltd - Premium Tamarind Juice & Sustainable Millet Porridge Production."
     />
-    <title>Salam Company Ltd | Juice & Forage</title>
+    <title>Salam Company Ltd | Juice & Porridge</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -19,19 +19,45 @@
     />
     <link rel="stylesheet" href="style.css" />
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/salamlogo.png" />
+
+    <!-- Preload Hero Image for Faster LCP -->
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1621263764928-df1444c5e859?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+    />
+
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
   </head>
-  <body>
+  <body id="page-top">
+    <!-- Page Loader -->
+    <div id="page-loader" class="loader-container">
+      <div
+        class="spinner-border text-green"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      >
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
     <nav class="navbar navbar-expand-lg sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">
           <div class="brand-logo">
-            <img src="images/salamlogo.png" alt="Salam Logo" class="img-fluid">
+            <img
+              src="images/salamlogo.png"
+              alt="Salam Logo"
+              class="img-fluid"
+              width="77"
+              height="60"
+            />
           </div>
-          <span class="d-none d-sm-inline ms-2">Salam Co.</span>
         </a>
         <button
           class="navbar-toggler"
@@ -41,11 +67,8 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
             <li class="nav-item">
               <a class="nav-link active" href="#home">Home</a>
             </li>
@@ -53,15 +76,29 @@
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#products">Our Products</a>
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
-        </div>
-        <div class="d-none d-lg-block">
-             <a href="#contact" class="btn btn-sm btn-custom-outline">Get a Quote</a>
+          <form class="d-flex ms-lg-3" role="search">
+            <div class="input-group">
+              <input
+                class="form-control form-control-sm"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-sm btn-search" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </nav>
@@ -73,18 +110,24 @@
           <div class="col-lg-8">
             <span class="hero-tag">Pure Nature, Sustainable Future</span>
             <h1 class="hero-title">
-              Revitalizing Lives with <span class="text-green">Tamarind</span> & <br />
-              Nourishing Livestock with <span class="text-orange">Millet</span>
+              Revitalizing Lives with
+              <span class="text-green">Tamarind Juice</span> &
+              <br />
+              Sustainable <span class="text-orange">porridge</span>
             </h1>
             <p class="lead mb-4 text-white-75">
-              Salam Company Ltd connects local harvests to global standards. 
-              We produce premium tamarind juices and high-nutrient millet forage.
+              Salam Company Ltd transforms wild tamarind into refreshing
+              beverages. We produce premium tamarind juices and process
+              by-products into nutrient-rich porridge.
             </p>
             <div class="d-flex flex-wrap gap-3">
               <a href="#products" class="btn btn-custom-green">
                 Explore Products
               </a>
-              <a href="#about" class="btn btn-outline-light rounded-pill px-4 py-2">
+              <a
+                href="#about"
+                class="btn btn-outline-light rounded-pill px-4 py-2"
+              >
                 Our Story
               </a>
             </div>
@@ -98,19 +141,52 @@
         <div class="row align-items-center">
           <div class="col-lg-6 mb-4 mb-lg-0">
             <img
-              src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              src="images/schwoaze.jpg"
               alt="Sustainable Farming"
               class="img-fluid rounded-4 shadow-lg"
+              loading="lazy"
             />
           </div>
           <div class="col-lg-6 ps-lg-5">
-            <h6 class="text-blue text-uppercase fw-bold mb-2">
-              Who We Are
-            </h6>
-            <h2 class="mb-4 display-6 fw-bold">Bridging Agriculture & Refreshment</h2>
+            <h6 class="text-blue text-uppercase fw-bold mb-2">Who We Are</h6>
+            <h2 class="mb-4 display-6 fw-bold">
+              Nature's Goodness in Every Bottle
+            </h2>
             <p class="text-secondary mb-4">
-              Founded in 2023, Salam Company Ltd operates at the intersection of beverage production and animal nutrition. We utilize the nutrient-rich Tamarind fruit for human consumption while processing Millet byproducts into premium forage.
+              Founded in 2025, Salam Company Ltd operates at the intersection of
+              beverage production and sustainable waste management. We extract
+              the finest essence of Tamarind for our juices and repurpose the
+              pulp into high-quality porridge.
             </p>
+
+            <!-- Mission & Vision -->
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <div
+                  class="p-3 bg-light rounded-3 border-start border-4 border-success h-100"
+                >
+                  <h6 class="fw-bold text-green">Our Mission</h6>
+                  <p class="small text-muted mb-0">
+                    To create sustainable, income-generating enterprises that
+                    use locally available resources to provide decent
+                    employment, build practical skills and unlock the creativity
+                    and productivity of disadvantaged, Refugee and host
+                    community youth.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div
+                  class="p-3 bg-light rounded-3 border-start border-4 border-warning h-100"
+                >
+                  <h6 class="fw-bold text-orange">Our Vision</h6>
+                  <p class="small text-muted mb-0">
+                    Self-reliant refugee and host community youth Contributing
+                    to inclusive and sustainable economic development
+                  </p>
+                </div>
+              </div>
+            </div>
 
             <div class="row mt-4">
               <div class="col-md-6 mb-3">
@@ -120,7 +196,9 @@
                   </div>
                   <div>
                     <h5 class="fw-bold">Pure Juice</h5>
-                    <p class="small text-muted">Natural extraction, no artificial preservatives.</p>
+                    <p class="small text-muted">
+                      Natural extraction, no artificial preservatives.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -130,35 +208,14 @@
                     <i class="bi bi-flower1"></i>
                   </div>
                   <div>
-                    <h5 class="fw-bold">Quality Forage</h5>
-                    <p class="small text-muted">High-protein millet & tamarind mix for livestock.</p>
+                    <h5 class="fw-bold">Quality Porridge</h5>
+                    <p class="small text-muted">
+                      Nutrient-dense tamarind pulp feed for human consumption.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="stats-section">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col-6 col-md-3 mb-4 mb-md-0 border-end border-white-50">
-            <div class="stat-number">3+</div>
-            <div class="stat-label">Years of Growth</div>
-          </div>
-          <div class="col-6 col-md-3 mb-4 mb-md-0 border-end border-white-50">
-            <div class="stat-number">50k+</div>
-            <div class="stat-label">Liters Produced</div>
-          </div>
-          <div class="col-6 col-md-3 border-end border-white-50">
-            <div class="stat-number">200+</div>
-            <div class="stat-label">Farmers Supported</div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="stat-number">100%</div>
-            <div class="stat-label">Organic Sourcing</div>
           </div>
         </div>
       </div>
@@ -170,130 +227,330 @@
           <h6 class="text-green text-uppercase fw-bold">Our Production</h6>
           <h2 class="fw-bold">What We Deliver</h2>
         </div>
-        
+
         <div class="card card-custom mb-5 bg-white border-0">
-            <div class="row g-0 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <img
-                    src="https://images.unsplash.com/photo-1546173159-315724a31696?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Fresh Tamarind Juice"
-                    class="img-fluid rounded-end-lg h-100 object-fit-cover"
-                    style="min-height: 400px;"
-                    />
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-5">
-                        <span class="badge bg-green mb-3">Beverage Division</span>
-                        <h3 class="mb-3">Premium Tamarind Nectar</h3>
-                        <p class="text-muted mb-4">
-                        Our signature juice is crafted from hand-picked wild tamarind. Rich in antioxidants and vitamins, it offers a distinct tangy-sweet flavor profile that local markets love. We ensure sustainable processing that retains natural nutrients.
-                        </p>
-                        <ul class="list-unstyled text-muted mb-4">
-                            <li><i class="bi bi-check-circle-fill text-green me-2"></i> 100% Natural Ingredients</li>
-                            <li><i class="bi bi-check-circle-fill text-green me-2"></i> Locally Sourced Tamarind</li>
-                            <li><i class="bi bi-check-circle-fill text-green me-2"></i> Hygienic Bottling Process</li>
-                        </ul>
-                    </div>
-                </div>
+          <div class="row g-0 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+              <img
+                src="images/juice.jpg"
+                alt="Fresh Tamarind Juice"
+                class="img-fluid rounded-end-lg h-100 object-fit-cover"
+                style="min-height: 400px"
+                loading="lazy"
+              />
             </div>
+            <div class="col-lg-6 order-lg-1">
+              <div class="p-5">
+                <span class="badge bg-green mb-3">Beverage Division</span>
+                <h3 class="mb-3">Premium Tamarind Nectar</h3>
+                <p class="text-muted mb-4">
+                  Our signature juice is crafted from hand-picked wild tamarind.
+                  Rich in antioxidants and vitamins, it offers a distinct
+                  tangy-sweet flavor profile that local markets love. We ensure
+                  sustainable processing that retains natural nutrients.
+                </p>
+                <ul class="list-unstyled text-muted mb-4">
+                  <li>
+                    <i class="bi bi-check-circle-fill text-green me-2"></i> 100%
+                    Natural Ingredients
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-green me-2"></i>
+                    Locally Sourced Tamarind
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill text-green me-2"></i>
+                    Hygienic Bottling Process
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="card card-custom bg-white border-0">
-            <div class="row g-0 align-items-center">
-                <div class="col-lg-6">
-                    <img
-                    src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Millet Forage"
-                    class="img-fluid rounded-start-lg h-100 object-fit-cover"
-                    style="min-height: 400px;"
-                    />
-                </div>
-                <div class="col-lg-6">
-                    <div class="p-5">
-                        <span class="badge bg-orange mb-3">Agri-Feed Division</span>
-                        <h3 class="mb-3">Tamarind & Millet Forage</h3>
-                        <p class="text-muted mb-4">
-                        We revolutionize animal feed by combining nutrient-dense millet stalks with processed tamarind byproducts. This blend provides essential fiber and energy for livestock, supporting local farmers with affordable, high-quality feed.
-                        </p>
-                        <a href="#contact" class="btn btn-outline-dark rounded-pill px-4">
-                            Inquire for Bulk Orders <i class="bi bi-arrow-right ms-1"></i>
-                        </a>
-                    </div>
-                </div>
+          <div class="row g-0 align-items-center">
+            <div class="col-lg-6">
+              <img
+                src="images/kenstock-tamarind-5000523_1280.png"
+                alt="Millet Forage"
+                class="img-fluid rounded-start-lg h-100 object-fit-cover"
+                style="min-height: 400px"
+                loading="lazy"
+              />
             </div>
+            <div class="col-lg-6">
+              <div class="p-5">
+                <span class="badge bg-orange mb-3"
+                  >Sustainability Division</span
+                >
+                <h3 class="mb-3">Processed Tamarind porridge</h3>
+                <p class="text-muted mb-4">
+                  We revolutionize animal feed by processing tamarind pulp and
+                  seeds leftover from juice extraction. This zero-waste approach
+                  provides essential fiber and energy for livestock, supporting
+                  local farmers with affordable feed.
+                </p>
+                <a
+                  href="#contact"
+                  class="btn btn-outline-dark rounded-pill px-4"
+                >
+                  Inquire for Bulk Orders <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section-padding bg-white">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h6 class="text-green text-uppercase fw-bold">Testimonials</h6>
+          <h2 class="fw-bold">What People Say</h2>
         </div>
 
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <!-- Review 1 -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                  <div class="mb-4">
+                    <i class="bi bi-quote display-1 text-green opacity-25"></i>
+                  </div>
+                  <p class="lead text-muted mb-4 fs-4 fst-italic">
+                    "The tamarind juice is unlike anything I've tasted before.
+                    It's refreshing, natural, and you can really taste the
+                    quality. My family loves it!"
+                  </p>
+                  <h5 class="fw-bold">Nyakume K.</h5>
+                  <small class="text-secondary">Local Distributor, Arua</small>
+                </div>
+              </div>
+            </div>
+            <!-- Review 2 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                  <div class="mb-4">
+                    <i class="bi bi-quote display-1 text-green opacity-25"></i>
+                  </div>
+                  <p class="lead text-muted mb-4 fs-4 fst-italic">
+                    "Salam Company's porridge has significantly improved the
+                    health of my livestock. It's affordable and high quality. A
+                    game changer for farmers."
+                  </p>
+                  <h5 class="fw-bold">John Isaac.</h5>
+                  <small class="text-secondary">Local Retailer</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
     </section>
 
     <section id="contact" class="section-padding">
       <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="card shadow-lg border-0 overflow-hidden rounded-4">
-                    <div class="row g-0">
-                        <div class="col-lg-5 bg-dark text-white p-5 d-flex flex-column justify-content-between">
-                            <div>
-                                <h3 class="fw-bold mb-4">Get in Touch</h3>
-                                <p class="text-white-50 mb-5">Interested in distributing our juices or buying forage? Contact us today.</p>
-                                
-                                <div class="d-flex mb-4 align-items-center">
-                                    <div class="icon-box bg-white-10 text-white me-3 rounded-circle" style="width:40px; height:40px; background: rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center;">
-                                        <i class="bi bi-geo-alt"></i>
-                                    </div>
-                                    <div>
-                                        <h6 class="fw-bold mb-0">Location</h6>
-                                        <p class="small text-white-50 mb-0">Oli Area, Arua Town, Uganda</p>
-                                    </div>
-                                </div>
-                                <div class="d-flex mb-4 align-items-center">
-                                    <div class="icon-box bg-white-10 text-white me-3 rounded-circle" style="width:40px; height:40px; background: rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center;">
-                                        <i class="bi bi-envelope"></i>
-                                    </div>
-                                    <div>
-                                        <h6 class="fw-bold mb-0">Email</h6>
-                                        <p class="small text-white-50 mb-0">inquiry@salamcompany.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-4">
-                                <small>&copy; 2026 Salam Company Ltd.</small>
-                            </div>
-                        </div>
+          <div class="col-lg-10">
+            <div class="card shadow-lg border-0 overflow-hidden rounded-4">
+              <div class="row g-0">
+                <div
+                  class="col-lg-5 bg-dark text-white p-5 d-flex flex-column justify-content-between"
+                >
+                  <div>
+                    <h3 class="fw-bold mb-4">Get in Touch</h3>
+                    <p class="text-white-50 mb-5">
+                      Interested in distributing our juices or buying porridge?
+                      Contact us today.
+                    </p>
 
-                        <div class="col-lg-7 p-5 bg-white">
-                            <h4 class="mb-4 text-dark fw-bold">Send a Message</h4>
-                            <form id="contact-form">
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label class="small fw-bold mb-1">Name</label>
-                                        <input type="text" name="user_name" class="form-control bg-light border-0" placeholder="Your Name" required />
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label class="small fw-bold mb-1">Email</label>
-                                        <input type="email" name="user_email" class="form-control bg-light border-0" placeholder="name@example.com" required />
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label class="small fw-bold mb-1">Interest</label>
-                                    <select name="subject" class="form-select bg-light border-0">
-                                        <option value="Juice Distribution">Juice Distribution</option>
-                                        <option value="Forage Purchase">Forage / Animal Feed</option>
-                                        <option value="General Inquiry">General Inquiry</option>
-                                    </select>
-                                </div>
-                                <div class="mb-4">
-                                    <label class="small fw-bold mb-1">Message</label>
-                                    <textarea name="message" class="form-control bg-light border-0" rows="4" placeholder="How can we help?" required></textarea>
-                                </div>
-                                <button type="submit" id="submit-btn" class="btn btn-custom-green w-100">
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
+                    <div class="d-flex mb-4 align-items-center">
+                      <div
+                        class="icon-box bg-white-10 text-white me-3 rounded-circle"
+                        style="
+                          width: 40px;
+                          height: 40px;
+                          background: rgba(255, 255, 255, 0.1);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                        "
+                      >
+                        <i class="bi bi-geo-alt"></i>
+                      </div>
+                      <div>
+                        <h6 class="fw-bold mb-0">Location</h6>
+                        <p class="small text-white-50 mb-0">
+                          Oli Area, Arua Town, Uganda
+                        </p>
+                      </div>
                     </div>
+                    <div class="d-flex mb-4 align-items-center">
+                      <div
+                        class="icon-box bg-white-10 text-white me-3 rounded-circle"
+                        style="
+                          width: 40px;
+                          height: 40px;
+                          background: rgba(255, 255, 255, 0.1);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                        "
+                      >
+                        <i class="bi bi-envelope"></i>
+                      </div>
+                      <div>
+                        <h6 class="fw-bold mb-0">Email</h6>
+                        <p class="small text-white-50 mb-0">
+                          inquiry@salamcompany.com
+                        </p>
+                      </div>
+                    </div>
+                    <div class="d-flex mb-4 align-items-center">
+                      <div
+                        class="icon-box bg-white-10 text-white me-3 rounded-circle"
+                        style="
+                          width: 40px;
+                          height: 40px;
+                          background: rgba(255, 255, 255, 0.1);
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                        "
+                      >
+                        <i class="bi bi-telephone"></i>
+                      </div>
+                      <div>
+                        <h6 class="fw-bold mb-0">Phone</h6>
+                        <p class="small text-white-50 mb-0">
+                          <a
+                            href="tel:+256781765026"
+                            class="text-white-50 text-decoration-none"
+                            >+256 781765026</a
+                          >
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4">
+                    <small>&copy; 2026 Salam Company Ltd.</small>
+                  </div>
                 </div>
+
+                <div class="col-lg-7 p-5 bg-white">
+                  <h4 class="mb-4 text-dark fw-bold">Send a Message</h4>
+                  <form id="contact-form">
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="small fw-bold mb-1">Name</label>
+                        <input
+                          type="text"
+                          name="user_name"
+                          class="form-control bg-light border-0"
+                          placeholder="Your Name"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="small fw-bold mb-1">Email</label>
+                        <input
+                          type="email"
+                          name="user_email"
+                          class="form-control bg-light border-0"
+                          placeholder="name@example.com"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label class="small fw-bold mb-1">Interest</label>
+                      <select
+                        name="subject"
+                        class="form-select bg-light border-0"
+                      >
+                        <option value="Juice Distribution">
+                          Juice Distribution
+                        </option>
+                        <option value="Forage Purchase">
+                          Porridge Distribution
+                        </option>
+                        <option value="General Inquiry">General Inquiry</option>
+                      </select>
+                    </div>
+                    <div class="mb-4">
+                      <label class="small fw-bold mb-1">Message</label>
+                      <textarea
+                        name="message"
+                        class="form-control bg-light border-0"
+                        rows="4"
+                        placeholder="How can we help?"
+                        required
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit"
+                      id="submit-btn"
+                      class="btn btn-custom-green w-100"
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Location Map -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63778.36448376884!2d30.87392686883866!3d3.020797288673756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x176e6260c6000001%3A0x6000000000000000!2sArua%2C%20Uganda!5e0!3m2!1sen!2sus!4v1625246333195!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <div class="text-center mt-4">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Arua,Uganda"
+                target="_blank"
+                class="btn btn-custom-outline"
+              >
+                Get Directions <i class="bi bi-box-arrow-up-right ms-2"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -302,40 +559,168 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-4">
-            <h5 class="mb-3 fw-bold text-green"><img src="images/salamlogo.png" width="90" height="70" alt="">Salam Company Ltd.</h5>
+            <h5 class="mb-3 fw-bold text-green">
+              <img
+                src="images/salamlogo.png"
+                width="90"
+                height="70"
+                alt="Salam Company Logo"
+                loading="lazy"
+              />Salam Company Ltd.
+            </h5>
             <p class="small text-secondary">
-              Innovating in Arua since 2023. We are committed to high-quality tamarind beverages and sustainable livestock solutions.
+              We are committed to high-quality tamarind beverages and
+              sustainable solutions.
             </p>
           </div>
           <div class="col-lg-2 mb-4">
             <h6 class="fw-bold mb-3">Links</h6>
             <ul class="list-unstyled small">
-              <li class="mb-2"><a href="#home" class="text-secondary text-decoration-none">Home</a></li>
-              <li class="mb-2"><a href="#about" class="text-secondary text-decoration-none">About Us</a></li>
-              <li class="mb-2"><a href="#products" class="text-secondary text-decoration-none">Services</a></li>
+              <li class="mb-2">
+                <a href="index.html" class="text-secondary text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="index.html#about"
+                  class="text-secondary text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="services.html"
+                  class="text-secondary text-decoration-none"
+                  >Services</a
+                >
+              </li>
+              
+              <li class="mb-2">
+                <a href="faq.html" class="text-secondary text-decoration-none"
+                  >FAQ</a
+                >
+              </li>
+              
             </ul>
           </div>
           <div class="col-lg-2 mb-4">
             <h6 class="fw-bold mb-3">Legal</h6>
             <ul class="list-unstyled small">
-              <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Privacy Policy</a></li>
-              <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Terms of Service</a></li>
+              <li class="mb-2">
+                <a
+                  href="privacy.html"
+                  class="text-secondary text-decoration-none"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="terms.html" class="text-secondary text-decoration-none"
+                  >Terms of Service</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-lg-4">
-             <h6 class="fw-bold mb-3">Connect</h6>
-             <div class="d-flex gap-2">
-                 <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-facebook"></i></a>
-                 <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-twitter"></i></a>
-                 <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle"><i class="bi bi-instagram"></i></a>
-             </div>
+            <h6 class="fw-bold mb-3">Connect</h6>
+            <div class="d-flex gap-2">
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-twitter"></i
+              ></a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                class="btn btn-sm btn-outline-secondary rounded-circle"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
           </div>
         </div>
         <div class="border-top border-secondary mt-4 pt-3 text-center">
-            <small class="text-secondary">&copy; 2026 Salam Company Ltd. All rights reserved.</small>
+          <small class="text-secondary"
+            >&copy; 2026 Salam Company Ltd. All rights reserved.</small
+          >
+          <div class="mt-2">
+            <a
+              href="#page-top"
+              class="text-secondary text-decoration-none small back-to-top-link"
+            >
+              Back to Top <i class="bi bi-arrow-up"></i>
+            </a>
+          </div>
         </div>
       </div>
     </footer>
+
+    <!-- Thank You Modal -->
+    <div class="modal fade" id="thankYouModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center border-0 rounded-4 p-4">
+          <div class="modal-body">
+            <div class="mb-3 text-success">
+              <i class="bi bi-check-circle-fill display-1"></i>
+            </div>
+            <h3 class="fw-bold mb-2">Thank You!</h3>
+            <p class="text-muted mb-4">
+              Your message has been received. We will get back to you shortly.
+            </p>
+            <button
+              type="button"
+              class="btn btn-custom-green px-4 rounded-pill"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-banner d-none">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-3 mb-md-0">
+            <p class="mb-0 text-secondary small">
+              We use cookies to ensure you get the best experience on our
+              website. By continuing, you agree to our
+              <a href="privacy.html" class="text-green text-decoration-none"
+                >privacy policy</a
+              >.
+            </p>
+          </div>
+          <div class="col-md-4 text-md-end">
+            <button id="acceptCookies" class="btn btn-sm btn-custom-green px-4">
+              Accept
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" class="scroll-top-btn" title="Go to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/256700000000"
+      class="whatsapp-float"
+      target="_blank"
+      title="Chat on WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
